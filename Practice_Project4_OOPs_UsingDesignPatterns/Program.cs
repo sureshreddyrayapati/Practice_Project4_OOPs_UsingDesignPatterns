@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,6 +13,7 @@ namespace Practice_Project4_OOPs_UsingDesignPatterns
         static List<Subject> subject;
         static Program()
         {
+            //for getting all options output we are addings some data already and user aslo add values 
             student = new List<Student>() 
             { 
                 new Student(){Name="Suresh",ClassSection="Class A"},
@@ -98,15 +99,15 @@ namespace Practice_Project4_OOPs_UsingDesignPatterns
             }
         }
         
-        static void stdDisplay()
+        static void stdDisplay()//displaying the stundent data after adding
         {
             student.ForEach(x => { Console.WriteLine("Student Name :{0} Student Class :{1}", x.Name, x.ClassSection); });
         }
-        static void TechDisplay()
+        static void TechDisplay()//display Teachers data
         {
             teacher.ForEach(x1 => { Console.WriteLine("Student Name :{0} Student Class :{1}", x1.Name, x1.ClassSection); });
         }
-        static void SubDisplay()
+        static void SubDisplay()//Display Subjects DAta
         {
             subject.ForEach(x1 => { Console.WriteLine("Subject Name :{0} Subject Code :{1}, subject Teacher :{2}", x1.Name, x1.SubCode,x1.Teacher.Name); });
         }
@@ -119,7 +120,7 @@ namespace Practice_Project4_OOPs_UsingDesignPatterns
             {
                 Console.WriteLine("Enter how many number of Students you want to add");
                 int n1= Convert.ToInt32(Console.ReadLine());
-                for (int i = 0; i < n1; i++)
+                for (int i = 1; i <=n1; i++)
                 {
                     Console.WriteLine($"Enter Name and class of stundet {i}");
                     AddStudents();
@@ -130,7 +131,7 @@ namespace Practice_Project4_OOPs_UsingDesignPatterns
             {
                 Console.WriteLine("Enter how many number of Teachers you want to add");
                 int n1 = Convert.ToInt32(Console.ReadLine());
-                for (int i = 0; i < n1; i++)
+                for (int i = 1; i <=n1; i++)
                 {
                     Console.WriteLine($"Enter Name and class of Teacher {i}");
                     AddTeachers();
@@ -141,7 +142,7 @@ namespace Practice_Project4_OOPs_UsingDesignPatterns
             {
                 Console.WriteLine("Enter how many number of subjects you want to add");
                 int n1 = Convert.ToInt32(Console.ReadLine());
-                for (int i = 0; i < n1; i++)
+                for (int i = 1; i <=n1; i++)
                 {
                     Console.WriteLine($"Enter Name of subject code of suject {i}");
                     AddSubject();
@@ -165,7 +166,7 @@ namespace Practice_Project4_OOPs_UsingDesignPatterns
                 Main(args);
 
             }
-            Console.WriteLine("\n1. Continue Process or Press Any number to Exit");
+            Console.WriteLine("\nContinue Process Press 1 or Press Any number to Exit");
             int c2 = Convert.ToInt32(Console.ReadLine());
             if (c2 == 1)
             {
