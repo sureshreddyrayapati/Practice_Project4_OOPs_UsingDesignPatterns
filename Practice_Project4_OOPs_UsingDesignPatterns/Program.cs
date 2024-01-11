@@ -61,6 +61,7 @@ namespace Practice_Project4_OOPs_UsingDesignPatterns
             string subjectCode = Console.ReadLine();
 
             Console.WriteLine("Select Teacher by Index to which subject mentioned is to be assigned:");
+            Console.WriteLine("here is the list of Teachers available ");
             for (int i = 0; i < teacher.Count; i++)
             {
                 Console.WriteLine($"{i + 1}. {teacher[i].Name}");
@@ -157,7 +158,7 @@ namespace Practice_Project4_OOPs_UsingDesignPatterns
             }
             else if(n==5)
             {
-                Console.WriteLine("Enter Teacher Name\nenter Name exaplample---> Teacher1 ,Teacher2...");
+                Console.WriteLine("Enter Teacher Name\nenter Name example---> Teacher1 ,Teacher2...");
                 ShowSubjectsTaughtByTeacher(Console.ReadLine()) ;
             }
             else
